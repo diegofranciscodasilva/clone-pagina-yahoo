@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+.header {
+    color: #400090;
+    padding: 10px 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo h1 a {
+    text-decoration: none;
+}
+
+.nav .navigation a {
+    color: #333;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.input {
+    margin: 20px auto;
+    width: 40%;
+}
+
+.input input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.search-focused {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.icons span {
+    margin: 0 10px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.icons span:hover {
+    color: #400090;
+}
+
+.text {
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 20px;
+    width: 576px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer .links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer .links ul li {
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+.footer .links ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer .links ul li a:hover {
+    color: #400090;
+}
+
+.footer .links .settings {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.footer .links .settings:hover {
+    color: #400090;
+}
+
+.footer .links .settings-name {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.footer .links .settings-name a {
+    color: #333;
+    text-decoration: none;
+
+}
+.footer .links .settings-name a:hover {
+    color: #400090;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .nav {
+        margin-top: 20px;
+    }
+
+    .nav .navigation {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .nav .navigation a {
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .title h1 {
+        font-size: 24px;
+    }
+
+    .input {
+        width: 80%;
+    }
+
+    .input input[type="text"] {
+        width: 100%;
+    }
+
+    .icons span {
+        font-size: 22px;
+    }
+
+    .text {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .footer .links ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .input {
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    .text {
+        width: 576px;
+        margin: 30px auto;
+    }
+}
