@@ -15,7 +15,7 @@ body {
 .header {
     color: #400090;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,11 +30,41 @@ body {
     text-decoration: none;
 }
 
-.nav .navigation a {
+.navigation a {
     color: #333;
     text-decoration: none;
     font-size: 25px;
     margin-left: 20px;
+}
+
+.apps-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 90px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.apps-menu a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+    padding: 10px;
+}
+
+.apps-menu a:last-child {
+    margin-bottom: 0;
+}
+
+.apps-menu a:hover {
+    color: #7406f9;
 }
 
 main {
@@ -59,10 +89,12 @@ main {
     border: 1px solid #ccc;
     border-radius: 20px;
     outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-focused {
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 .icons span {
@@ -72,7 +104,7 @@ main {
 }
 
 .icons span:hover {
-    color: #400090;
+    color: #7406f9;
 }
 
 .text {
@@ -84,6 +116,7 @@ main {
     width: 576px;
     margin-left: auto;
     margin-right: auto;
+    z-index: 1;
 }
 
 .text p {
@@ -91,62 +124,130 @@ main {
     line-height: 1.5;
     margin: 0;
     text-align: justify;
+    z-index: 1;
+}
+
+.current-affairs {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 476px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.columns {
+    display: flex;
+    margin-top: 20px; 
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    padding: 0;
+    margin: 0 10px;
+}
+
+.column:nth-child(2) {
+    margin-left: 20px;
+}
+
+.current-affairs h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#affairs-list-left,
+#affairs-list-right {
+    padding: 0;
+}
+
+#affairs-list-left li,
+#affairs-list-right li {
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .footer {
     padding: 20px;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
+    margin-top: 30px;
 }
 
-.footer .links ul {
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+}
+
+.links-center ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 100%;
 }
 
-.footer .links ul li {
+.links-center ul li {
     margin: 0 10px;
     font-size: 12px;
+    padding: 10px;
 }
 
-.footer .links ul li a {
+.links-center ul li a {
     color: #333;
     text-decoration: none;
     font-size: 12px;
 }
 
-.footer .links ul li a:hover {
-    color: #400090;
+.links-center ul li a:hover {
+    color: #7406f9;
 }
 
-.footer .links .settings {
-    margin-top: 10px;
+.link-configuration {
+    display: flex;
+    align-items: center;
+}
+
+.link-configuration .settings {
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.link-configuration .settings .settings-outline {
+    color: #333;
+}
+
+.link-configuration .settings:hover {
+    color: #7406f9;
+}
+
+.link-configuration .settings-name {
+    margin-top: 20px;
+    margin-right: 20px;
     cursor: pointer;
     font-size: 12px;
 }
 
-.footer .links .settings:hover {
-    color: #400090;
-}
-
-.footer .links .settings-name {
-    margin: 0 10px;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.footer .links .settings-name a {
+.link-configuration .settings-name a {
     color: #333;
     text-decoration: none;
 
 }
-.footer .links .settings-name a:hover {
-    color: #400090;
+
+.link-configuration .settings-name a:hover {
+    color: #7406f9;
 }
 
 @media only screen and (max-width: 768px) {
@@ -160,7 +261,7 @@ main {
         margin-top: 20px;
     }
 
-    .nav .navigation {
+    .navigation {
         display: flex;
         justify-content: space-around;
         width: 100%;
@@ -171,7 +272,7 @@ main {
         font-size: 28px;
     }
 
-    .nav .navigation a {
+    .navigation a {
         font-size: 20px;
         margin-left: 0;
     }
@@ -201,7 +302,7 @@ main {
         margin: 20px auto;
     }
 
-    .footer .links ul {
+    .links-center ul {
         flex-wrap: wrap;
     }
 }

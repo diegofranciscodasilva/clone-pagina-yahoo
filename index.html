@@ -15,17 +15,24 @@
         </div>
         <div class="nav">
             <nav class="navigation">
-                <a href="https://mail.yahoo.com/" target="_blank"><ion-icon name="mail-outline"></ion-icon></a></li>
-                <a href="#"><ion-icon name="apps-outline"></ion-icon></a></li>
-                <a href="https://br.search.yahoo.com/search;_ylt=AwrOuK4QleNlAKgYNWTz6Qt.;_ylc=X1MDMjExNDcxMDAwMwRfcgMyBGZyA3NmcARmcjIDc2EtZ3Atc2VhcmNoBGdwcmlkA3pPOVVZMEcuU3JXMVVoT04uX2ZCWkEEbl9yc2x0AzAEbl9zdWdnAzEwBG9yaWdpbgNici5zZWFyY2gueWFob28uY29tBHBvcwMxBHBxc3RyA1ByZXZpc.NvIGRvIHRlbXBvIHPjbyAEcHFzdHJsAzIyBHFzdHJsAzI3BHF1ZXJ5A3ByZXZpcyVDMyVBM28lMjBkbyUyMHRlbXBvJTIwcyVDMyVBM28lMjBwYXVsbwR0X3N0bXADMTcwOTQxMzY3MQR1c2VfY2FzZQM-?p=previs%C3%A3o+do+tempo+s%C3%A3o+paulo&fr2=sa-gp-search&fr=sfp" target="_blank"><ion-icon name="sunny-outline"></ion-icon></a>
+                <a href="https://mail.yahoo.com/" target="_blank" title="E-mail"><ion-icon name="mail-outline"></ion-icon></a></li>
+                <a href="#" title="Todos os Sites" id="apps"><ion-icon name="apps-outline"></ion-icon></a></li>
+                <a href="https://br.search.yahoo.com/search;_ylt=AwrOuK4QleNlAKgYNWTz6Qt.;_ylc=X1MDMjExNDcxMDAwMwRfcgMyBGZyA3NmcARmcjIDc2EtZ3Atc2VhcmNoBGdwcmlkA3pPOVVZMEcuU3JXMVVoT04uX2ZCWkEEbl9yc2x0AzAEbl9zdWdnAzEwBG9yaWdpbgNici5zZWFyY2gueWFob28uY29tBHBvcwMxBHBxc3RyA1ByZXZpc.NvIGRvIHRlbXBvIHPjbyAEcHFzdHJsAzIyBHFzdHJsAzI3BHF1ZXJ5A3ByZXZpcyVDMyVBM28lMjBkbyUyMHRlbXBvJTIwcyVDMyVBM28lMjBwYXVsbwR0X3N0bXADMTcwOTQxMzY3MQR1c2VfY2FzZQM-?p=previs%C3%A3o+do+tempo+s%C3%A3o+paulo&fr2=sa-gp-search&fr=sfp" target="_blank" title="Previsão do Tempo"><ion-icon name="sunny-outline"></ion-icon></a>
             </nav>
         </div>
     </header>
 
+    <div class="apps-menu" id="appsMenu">
+        <a href="https://mail.yahoo.com/"><ion-icon name="mail-outline"></ion-icon> Yahoo Mail</a>
+        <a href="https://br.financas.yahoo.com/quote/%5EBVSP?p=%5EBVSP"><ion-icon name="wallet-outline"></ion-icon> Yahoo Finanças</a>
+        <a href="https://br.search.yahoo.com/search;_ylt=AwrOuK4QleNlAKgYNWTz6Qt.;_ylc=X1MDMjExNDcxMDAwMwRfcgMyBGZyA3NmcARmcjIDc2EtZ3Atc2VhcmNoBGdwcmlkA3pPOVVZMEcuU3JXMVVoT04uX2ZCWkEEbl9yc2x0AzAEbl9zdWdnAzEwBG9yaWdpbgNici5zZWFyY2gueWFob28uY29tBHBvcwMxBHBxc3RyA1ByZXZpc.NvIGRvIHRlbXBvIHPjbyAEcHFzdHJsAzIyBHFzdHJsAzI3BHF1ZXJ5A3ByZXZpcyVDMyVBM28lMjBkbyUyMHRlbXBvJTIwcyVDMyVBM28lMjBwYXVsbwR0X3N0bXADMTcwOTQxMzY3MQR1c2VfY2FzZQM-?p=previs%C3%A3o+do+tempo+s%C3%A3o+paulo&fr2=sa-gp-search&fr=sfp" target="_blank" title="Previsão do Tempo"><ion-icon name="sunny-outline"></ion-icon> Previsão do Tempo</a>
+        <a href="#"><ion-icon name="settings-outline"></ion-icon> Configurações</a>
+    </div>
+
     <main>
         <div class="title">
             <h1>Bom Dia !</h1>
-            <p>Hoje é 1 de Janeiro.</p>
+            <p id="date-time"></p>
         </div>
         <div class="input">
             <input type="text" id="" placeholder="Buscar na Web" class="search" />
@@ -37,19 +44,34 @@
         <div class="text">
             <p>Não é a página que você esperava? Esta é a nova página inicial do Yahoo Brasil. Decidimos melhorar ainda mais nossos (e seus!) serviços favoritos: Yahoo Mail e ferramenta de busca Yahoo. Bem-vindo a este espaço!</p>
         </div>
+        <div class="current-affairs">
+            <h2>Assuntos do momento</h2>
+            <div class="columns">
+                <div class="column">
+                    <ol id="affairs-list-left"></ol>
+                </div>
+                <div class="column">
+                    <ol id="affairs-list-right"></ol>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
         <div class="links">
-            <ul>
-                <li><a href="https://br.ajuda.yahoo.com/" target="_blank">Ajuda</a></li>
-                <li><a href="https://legal.yahoo.com/br/pt/yahoo/privacy/products/searchservices/index.html" target="_blank">Privacidade</a></li>
-                <li><a href="https://legal.yahoo.com/br/pt/yahoo/terms/otos/index.html" target="_blank">Termos</a></li>
-                <li><a href="https://legal.yahoo.com/br/pt/yahoo/privacy/dashboard/index.html" target="_blank">Painel de privacidade</a></li>
-                <li><a href="https://about.ads.microsoft.com/pt-br/h/a/microsoft-advertising?s_cid=pt-br_search_a_ya_symh" target="_blank">Anunciar</a></li>
-            </ul>
-            <span class="settings"><ion-icon name="settings-outline"></ion-icon></span>
-            <span class="settings-name"><a href="#">Configurações</a></span>
+            <div class="links-center">
+                <ul>
+                    <li><a href="https://br.ajuda.yahoo.com/" target="_blank">Ajuda</a></li>
+                    <li><a href="https://legal.yahoo.com/br/pt/yahoo/privacy/products/searchservices/index.html" target="_blank">Privacidade</a></li>
+                    <li><a href="https://legal.yahoo.com/br/pt/yahoo/terms/otos/index.html" target="_blank">Termos</a></li>
+                    <li><a href="https://legal.yahoo.com/br/pt/yahoo/privacy/dashboard/index.html" target="_blank">Painel de privacidade</a></li>
+                    <li><a href="https://about.ads.microsoft.com/pt-br/h/a/microsoft-advertising?s_cid=pt-br_search_a_ya_symh" target="_blank">Anunciar</a></li>
+                </ul>
+            </div>
+            <div class="link-configuration">
+                <span class="settings"><ion-icon name="settings-outline"></ion-icon></span>
+                <span class="settings-name"><a href="#">Configurações</a></span>
+            </div>
         </div>
     </footer>
 
